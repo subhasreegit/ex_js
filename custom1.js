@@ -69,12 +69,12 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 	$(".tabcontent button:nth-child(1)").click(function(){
-    	$("#b1").css({"display":"block"});
-    	$("#b2").css({"display":"none"});
+      $(".content").removeClass('active');
+      $(".tabcontent .content:nth-child(3)").addClass('active');
   	}); 
-	$(".tabcontent button:nth-child(2)").click(function(){
-    	$("#b1").css({"display":"none"});;
-    	$("#b2").css({"display":"block"});
+$(".tabcontent button:nth-child(2)").click(function(){
+      $(".content").removeClass('active');
+      $(".tabcontent .content:nth-child(4)").addClass('active');
   	});
 });
 
