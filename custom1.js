@@ -15,15 +15,17 @@ $('.section2 button').click(function() {
 });
 
 
-$(window).scroll(function(){ 
-  var $el = $('.section3'); 
-  var isPositionFixed = ($el.css('position') == 'fixed');
-  if ($(this).scrollTop()== '700px' && !isPositionFixed){ 
-    $el.css({'position': 'fixed', 'top': '0px'}); 
+$(window).scroll(function(){
+  if($(window).scrollTop() > 700 && $(window).scrollTop() < 900)
+  {
+    $(".full").css({"position":"fixed",
+            "top":"0px"});
   }
-  if ($(this).scrollTop() >'900px' && isPositionFixed){
-    $el.css({'position': 'static', 'top': '0px'}); 
-  } 
+  else
+  {
+    $(".full").css({"position":"static",
+            "top":"0px"});
+  }
 });
 
 
